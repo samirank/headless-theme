@@ -1,0 +1,10 @@
+{
+  "name": "headless/theme",
+  "description": "Headless WordPress theme",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Headless\\Inc\\": "inc/"
+    }
+  }
+}
