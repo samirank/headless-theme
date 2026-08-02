@@ -1,0 +1,10 @@
+# High-risk paths require Samiran review.
+/.github/ @samirank
+/docs/decisions/ @samirank
+/composer.json @samirank
+/composer.lock @samirank
+/.env.example @samirank
+
+# WordPress behavior and security-sensitive theme/plugin code.
+/functions.php @samirank
+/inc/ @samirank
