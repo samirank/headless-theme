@@ -1,0 +1,50 @@
+name: Maintenance
+description: Track dependency, cleanup, refactor, or operational upkeep.
+title: "[Maintenance]: "
+labels: ["needs-spec"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test expectations
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Deployment and rollback
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options: [Low, Medium, High, Critical]
+    validations:
+      required: true
