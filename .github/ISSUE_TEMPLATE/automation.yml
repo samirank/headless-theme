@@ -1,0 +1,60 @@
+name: Automation
+description: Request automation, workflow, or integration work.
+title: "[Automation]: "
+labels: ["needs-spec"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: trigger
+    attributes:
+      label: Trigger and inputs
+      description: What starts the automation and what data is accepted?
+    validations:
+      required: true
+  - type: textarea
+    id: actions
+    attributes:
+      label: Actions
+      description: What should the automation do?
+    validations:
+      required: true
+  - type: textarea
+    id: idempotency
+    attributes:
+      label: Idempotency and retry behavior
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security and privacy
+      description: Credentials, scopes, secret handling, external calls, and audit requirements.
+      value: "No secrets are included in this issue."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Deployment and rollback
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options: [Low, Medium, High, Critical]
+    validations:
+      required: true

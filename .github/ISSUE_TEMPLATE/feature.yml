@@ -1,0 +1,85 @@
+name: Feature
+description: Request a user-facing or system capability.
+title: "[Feature]: "
+labels: ["needs-spec"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: User or business outcome
+      description: What becomes possible after completion?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What must change?
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What must not change?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical context
+  - type: textarea
+    id: security
+    attributes:
+      label: Security and privacy
+      value: "No secrets are included in this issue."
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test expectations
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence required
+      description: Screenshots, preview URL, logs, test output, migration plan, or benchmark.
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Deployment and rollback
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options: [Low, Medium, High, Critical]
+    validations:
+      required: true
+  - type: dropdown
+    id: human_gate
+    attributes:
+      label: Human gate
+      options: [None, Plan, Merge, Deployment]
+    validations:
+      required: true

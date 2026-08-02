@@ -2,6 +2,7 @@
   "name": "headless/theme",
   "description": "Headless WordPress theme",
   "type": "project",
+  "license": "GPL-2.0-or-later",
   "autoload": {
     "psr-4": {
       "Headless\\Inc\\": "inc/"

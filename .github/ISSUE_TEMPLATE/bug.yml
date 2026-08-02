@@ -1,0 +1,91 @@
+name: Bug
+description: Report broken behavior with testable evidence.
+title: "[Bug]: "
+labels: ["needs-spec"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is wrong or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: User or business outcome
+      description: What becomes possible after this is fixed?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What must change?
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What must not change?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use objectively testable statements.
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical context
+      description: Routes, services, data models, APIs, design links, or prior decisions.
+  - type: textarea
+    id: security
+    attributes:
+      label: Security and privacy
+      description: Authentication, authorization, personal data, secrets, external calls, and audit requirements.
+      value: "No secrets are included in this issue."
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test expectations
+      description: Unit, integration, end-to-end, accessibility, visual, performance, or migration tests.
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Deployment and rollback
+      description: How it reaches production and how it can be reverted.
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+  - type: dropdown
+    id: human_gate
+    attributes:
+      label: Human gate
+      options:
+        - None
+        - Plan
+        - Merge
+        - Deployment
+    validations:
+      required: true

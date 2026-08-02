@@ -1,0 +1,38 @@
+name: Research
+description: Investigate options before implementation.
+title: "[Research]: "
+labels: ["needs-spec"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: decision_needed
+    attributes:
+      label: Decision needed
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Security, privacy, cost, compatibility, timeline, or operational constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence required
+      description: Official docs, source links, comparison matrix, prototype, or recommendation.
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options: [Low, Medium, High, Critical]
+    validations:
+      required: true

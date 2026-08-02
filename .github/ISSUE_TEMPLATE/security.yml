@@ -1,0 +1,63 @@
+name: Security
+description: Report or track security work without exposing sensitive values.
+title: "[Security]: "
+labels: ["security-review", "needs-human"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste secrets, exploit credentials, private keys, tokens, dumps, or personal data into this issue."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the security concern without secret values.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What systems, users, data, or permissions may be affected?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence required
+      description: Redacted logs, scanner output, reproduction steps, or permission evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Mitigation and rollback
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options: [High, Critical, Medium, Low]
+    validations:
+      required: true
+  - type: dropdown
+    id: human_gate
+    attributes:
+      label: Human gate
+      options: [Plan, Merge, Deployment]
+    validations:
+      required: true
