@@ -28,6 +28,7 @@ find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
 ## Required Behavior
 
 - Work only on the linked issue.
+- Initial repository bootstrap PRs may omit a linked issue when creating the issue templates/control-plane needed to make future issues factory-ready.
 - Do not silently expand scope.
 - Preserve backward compatibility unless the issue explicitly changes it.
 - Add or update tests when behavior changes.
@@ -60,4 +61,4 @@ User-visible frontend changes require screenshots or browser QA evidence when a 
 - No new secret or high-severity vulnerability is introduced.
 - User-visible changes include evidence.
 - Rollback is described.
-- PR links the issue.
+- PR links the issue, except for initial repository bootstrap PRs that create the issue templates/control-plane required for future issues.
