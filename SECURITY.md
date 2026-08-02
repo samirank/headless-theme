@@ -2,7 +2,7 @@
 
 ## Reporting
 
-Open a private security issue or contact Samiran directly for sensitive findings. Do not paste secrets, private keys, tokens, exploit credentials, dumps, or personal data into GitHub issues, pull requests, logs, or screenshots.
+Use GitHub's private vulnerability reporting / Security Advisory flow when it is enabled for this repository. If that flow is unavailable, contact Samiran directly through an agreed private channel. Do not paste secrets, private keys, tokens, exploit credentials, dumps, or personal data into public GitHub issues, pull requests, logs, or screenshots.
 
 ## Handling
 
