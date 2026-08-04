@@ -3,6 +3,24 @@
 ## Local Checks
 
 ```sh
+
+## Validation of Headless Theme
+To validate this WordPress theme locally for the software factory pilot, run the following commands:
+
+```sh
+composer validate --strict --no-check-lock
+find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
+```
+
+## Rollback
+If you encounter issues during validation, revert to the previous stable state of the theme by restoring your codebase from version control.
+
+Run the following commands again:
+
+```sh
+composer validate --strict --no-check-lock
+find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
+```
 composer validate --strict --no-check-lock
 find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
 ```
