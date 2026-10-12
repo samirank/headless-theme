@@ -1,0 +1,55 @@
+schema_version: 1
+adoption:
+  standard:
+    repo: samirank/engineering-standards
+    ref: v1.8.0
+  profiles:
+  - wordpress
+  agents:
+  - claude
+  - codex
+  - cursor
+  - copilot
+  product:
+    has_api: false
+    has_ui: false
+  documentation:
+    api:
+      status: exception
+      reason: The theme exposes no product API; it only adjusts one WordPress REST filter.
+    user:
+      status: present
+      location: README.md
+    mcp:
+      status: exception
+      reason: A small theme with no product documentation to serve; revisit if it grows.
+  feedback:
+    roadmap: public
+    channel: https://github.com/samirank/headless-theme/issues
+  decisions:
+    complete: true
+    items:
+    - {topic: hosting, status: present, summary: "Manual upload of the theme zip to the owner's WordPress sites; no automatic deploy.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: previews, status: not-applicable, summary: No preview environments., reason: A small theme with no frontend of its own., answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: environments, status: not-applicable, summary: No environments or data owned by the theme., reason: The theme stores one option and holds no data of its own., answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: domains, status: not-applicable, summary: "No domains, DNS or email of its own.", reason: The external frontend owns domains., answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: distribution, status: planned, summary: "Free theme distributed from GitHub Releases: CI builds a versioned headless-theme.zip with a checksum; the theme updates itself through Plugin Update Checker reading the releases of samirank/headless-theme; no server. Rollback by installing the prior release zip. WordPress.org is not viable because the theme redirects all frontend requests. The same route is intended for the owner's other free themes and plugins; paid products would use a separate licensing route (Freemius recommended).", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: release, status: present, summary: "Pull requests only, human merge, protected main; tags and releases only on the maintainer's approval.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: design-system, status: not-applicable, summary: No design system., reason: The theme renders no UI., answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: credentials, status: present, summary: "No credentials in the repository; CI uses the GitHub token or OIDC only.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: security, status: present, summary: "Secret scanning and dependency audit via security.yml and Dependabot; SAST and DAST deferred.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: testing, status: present, summary: "composer validate and php lint in CI; PHPUnit, e2e and accessibility deferred (no UI).", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: ci, status: present, summary: "GitHub Actions on Ubicloud runners (GitHub-hosted minutes are exhausted); switching needs the Ubicloud app enabled for this repository, a separate approval. ci.yml and security.yml are the required gate.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: dependencies, status: present, summary: "Committed composer.lock; vendor/ stays committed; updates through reviewed Dependabot pull requests.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: lifecycle, status: present, summary: "Supports the latest WordPress 6.x and PHP 8.1+; advisories watched via Dependabot; rollback by redeploying the prior zip.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: services, status: not-applicable, summary: No third-party runtime services., reason: The theme calls no external service., answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: toolchain, status: present, summary: "Composer and php; commands are listed in AGENTS.md and CONTRIBUTING.md.", answered: 2026-10-12, approver: Samiran Kakoty}
+  documents:
+    map: docs/documentation-map.md
+    items:
+    - {type: architecture, status: repo, location: docs/architecture.md}
+    - {type: brand, status: not-applicable, reason: The theme has no brand package of its own.}
+    - {type: legal-contracts, status: not-applicable, reason: No contracts or licenses are tracked for this theme.}
+  exceptions:
+  - {item: license, reason: "GPL-2.0-or-later is declared in the style.css header; a LICENSE file is to be added in a follow-up."}
+  - {item: accessibility, reason: The theme renders no user interface.}

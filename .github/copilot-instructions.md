@@ -1,0 +1,13 @@
+<!-- engineering-standards:begin -->
+
+## Engineering standards
+
+This project follows https://github.com/samirank/engineering-standards pinned at `v1.8.0`. Before material work read its `AGENTS.md` at that ref and the standards it links, and verify anything freshness-sensitive against current official sources.
+
+Project-specific architecture and approved pins live in `engineering-standards.yml` and the project docs; they govern product specifics. They never weaken the standard's security, credential, testing or human-approval rules. When the two conflict, stop and ask.
+
+Before the first action on an external service (hosting, deploys, DNS, email, CI, a registry, an integration), report what you found for reaching it, confirm with the owner how to reach it and what will be created, and wait for approval. A platform default is not approval. See `standards/integration-interfaces.md`.
+
+This block is a pointer, not the whole standard: read only the standards that apply to the task (run `adopt.py context` for the short list), and keep your own instruction files short (`standards/context-management.md`).
+
+<!-- engineering-standards:end -->
