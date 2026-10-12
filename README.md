@@ -27,3 +27,9 @@ find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
 ## Factory Workflow
 
 Use one issue, one branch, and one pull request. Pull requests must include test evidence, security impact, and rollback notes before merge.
+
+## Project Documents
+
+- [AGENTS.md](AGENTS.md), [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), [CHANGELOG.md](CHANGELOG.md)
+- [Documentation map](docs/documentation-map.md), [data handling](docs/data-handling.md)
+- Engineering standard: [engineering-standards.yml](engineering-standards.yml) pins `samirank/engineering-standards` v1.8.0.
