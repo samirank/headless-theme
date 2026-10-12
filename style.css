@@ -1,11 +1,15 @@
 /*
-Theme Name: Headless
-Theme URI: https://samirankakoty.com
-Author: Your Name
+Theme Name: Headless Theme
+Theme URI: https://github.com/samirank/headless-theme
+Author: Samiran Kakoty
 Author URI: https://samirankakoty.com
-Description: A headless WordPress theme that seals off the frontend.
+Description: WordPress needs an active theme, even when the site is only a content backend. Headless Theme is that theme: it keeps WordPress, its admin, REST API and GraphQL fully available while sending visitors to your own frontend. Set the Frontend URL under Settings > Headless; leave it blank to disable the redirect.
 Version: 1.0.1
+Requires at least: 6.0
+Tested up to: 7.1
+Requires PHP: 8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: headless-theme
+Tags: headless, rest-api, graphql, redirect, backend
 */
