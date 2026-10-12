@@ -22,3 +22,10 @@ Revert the merged commit through GitHub and redeploy the previous known-good the
 ## Incident Notes
 
 If a change affects public site behavior, stop further rollout, capture sanitized evidence, revert or restore the previous theme version, and document the incident in a GitHub issue.
+## Releases and Updates
+
+1. Bump `Version` in `style.css` and add a `CHANGELOG.md` entry in a pull request; merge after review.
+2. With the maintainer's approval, tag the merge commit `vX.Y.Z` and push the tag. The Release workflow builds `headless-theme.zip` and a SHA-256 checksum and attaches them to a GitHub Release.
+3. Sites check the repository's releases through Plugin Update Checker and show the normal update notice under Appearance > Themes.
+4. First install: download `headless-theme.zip` from the latest release and upload it under Appearance > Themes > Add New. Verify it with `headless-theme.zip.sha256`.
+5. Rollback: install the previous release's zip over the current theme (Appearance > Themes > Add New > Upload, replace current).

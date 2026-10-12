@@ -7,5 +7,8 @@
     "psr-4": {
       "Headless\\Inc\\": "inc/"
     }
+  },
+  "require": {
+    "yahnis-elsts/plugin-update-checker": "^5.7"
   }
 }
