@@ -4,6 +4,11 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## Unreleased
 
+## 1.0.2 (2026-10-13)
+
+### Changed
+- The author link now points to https://samiran.dev.
+
 ## 1.0.1 (2026-10-12)
 
 ### Added
