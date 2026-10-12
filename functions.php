@@ -11,3 +11,6 @@ require_once get_template_directory() . '/inc/admin-settings.php';
 
 // Include REST API filters.
 require_once get_template_directory() . '/inc/rest-filters.php';
+
+// Check GitHub Releases for theme updates.
+require_once get_template_directory() . '/inc/updater.php';
