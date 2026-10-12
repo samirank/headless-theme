@@ -6,6 +6,9 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## 1.0.1 (2026-10-12)
 
+### Added
+- Full theme details (name, author, description, requirements, tags) and a screenshot, so the theme looks complete under Appearance > Themes.
+
 ### Changed
 - The Frontend URL now defaults to blank. With no URL set the theme does not redirect; set it under Settings > Headless.
 
