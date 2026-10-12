@@ -11,7 +11,7 @@ add_action('admin_menu', function() {
                 update_option('headless_frontend_url', esc_url_raw($_POST['headless_frontend_url']));
                 echo '<div class="updated"><p>Settings saved.</p></div>';
             }
-            $frontend_url = get_option('headless_frontend_url', 'https://samirankakoty.com');
+            $frontend_url = get_option('headless_frontend_url', '');
             ?>
             <div class="wrap">
                 <h1>Headless Settings</h1>

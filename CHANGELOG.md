@@ -4,6 +4,13 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## Unreleased
 
+## 1.0.1 (2026-10-12)
+
+### Changed
+- The Frontend URL now defaults to blank. With no URL set the theme does not redirect; set it under Settings > Headless.
+
+## 1.0.0 (2026-10-12)
+
 ### Added
 - Theme updates are delivered through GitHub Releases (Plugin Update Checker).
 
