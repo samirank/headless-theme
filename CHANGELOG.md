@@ -4,6 +4,18 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## Unreleased
 
+## 1.0.3 (2026-10-13)
+
+### Security
+- The Headless settings page now checks a nonce and the user's permission before saving, so the form can't be submitted from another site.
+
+### Fixed
+- Removed a PHP "undefined index" warning shown each time the settings page loaded.
+- Saving a blank Frontend URL now works, so you can turn the redirect off.
+
+### Added
+- A `LICENSE` file (GPL-2.0).
+
 ## 1.0.2 (2026-10-13)
 
 ### Changed
