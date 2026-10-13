@@ -33,8 +33,8 @@ adoption:
     - {topic: previews, status: not-applicable, summary: No preview environments., reason: A small theme with no frontend of its own., answered: 2026-10-12, approver: Samiran Kakoty}
     - {topic: environments, status: not-applicable, summary: No environments or data owned by the theme., reason: The theme stores one option and holds no data of its own., answered: 2026-10-12, approver: Samiran Kakoty}
     - {topic: domains, status: not-applicable, summary: "No domains, DNS or email of its own.", reason: The external frontend owns domains., answered: 2026-10-12, approver: Samiran Kakoty}
-    - {topic: distribution, status: planned, summary: "Free theme distributed from GitHub Releases: CI builds a versioned headless-theme.zip with a checksum; the theme updates itself through Plugin Update Checker reading the releases of samirank/headless-theme; no server. Rollback by installing the prior release zip. WordPress.org is not viable because the theme redirects all frontend requests. The same route is intended for the owner's other free themes and plugins; paid products would use a separate licensing route (Freemius recommended).", answered: 2026-10-12, approver: Samiran Kakoty}
-    - {topic: release, status: present, summary: "Pull requests only, human merge, protected main; tags and releases only on the maintainer's approval.", answered: 2026-10-12, approver: Samiran Kakoty}
+    - {topic: distribution, status: present, summary: "Free theme distributed from GitHub Releases: a version tag builds headless-theme.zip with a SHA-256 checksum in CI; the theme updates through Plugin Update Checker reading this repository's releases; no server. Rollback by installing the prior release zip. WordPress.org is not viable because the theme redirects all frontend requests.", answered: 2026-10-13, approver: Samiran Kakoty}
+    - {topic: release, status: exception, summary: "Pull requests and a human merge; tags and releases only on the maintainer's approval.", reason: "Main is not branch-protected at the owner's request: a solo repository where the owner cannot approve their own pull requests.", answered: 2026-10-13, approver: Samiran Kakoty}
     - {topic: design-system, status: not-applicable, summary: No design system., reason: The theme renders no UI., answered: 2026-10-12, approver: Samiran Kakoty}
     - {topic: credentials, status: present, summary: "No credentials in the repository; CI uses the GitHub token or OIDC only.", answered: 2026-10-12, approver: Samiran Kakoty}
     - {topic: security, status: present, summary: "Secret scanning and dependency audit via security.yml and Dependabot; SAST and DAST deferred.", answered: 2026-10-12, approver: Samiran Kakoty}
@@ -51,5 +51,4 @@ adoption:
     - {type: brand, status: not-applicable, reason: The theme has no brand package of its own.}
     - {type: legal-contracts, status: not-applicable, reason: No contracts or licenses are tracked for this theme.}
   exceptions:
-  - {item: license, reason: "GPL-2.0-or-later is declared in the style.css header; a LICENSE file is to be added in a follow-up."}
   - {item: accessibility, reason: The theme renders no user interface.}
