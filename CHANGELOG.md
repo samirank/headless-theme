@@ -4,6 +4,11 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## Unreleased
 
+## 1.0.4 (2026-10-13)
+
+### Fixed
+- "View version details" on an available update now shows this theme's changelog instead of an error, because GitHub refuses to load inside that popup.
+
 ## 1.0.3 (2026-10-13)
 
 ### Security
