@@ -4,6 +4,11 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## Unreleased
 
+## 1.0.5 (2026-10-14)
+
+### Changed
+- A simpler, cleaner theme screenshot.
+
 ## 1.0.4 (2026-10-13)
 
 ### Fixed
