@@ -14,7 +14,10 @@
 ```sh
 composer validate --strict --no-check-lock
 find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
+composer install && vendor/bin/phpunit
 ```
+
+`vendor/` is committed and ships in the release, so it must hold production packages only: after running the tests, run `composer install --no-dev` before committing.
 
 ## Scope Boundaries
 

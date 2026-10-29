@@ -12,7 +12,7 @@ jobs:
     runs-on: ubicloud-standard-2-ubuntu-2404
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Check tag matches theme version
         shell: bash
@@ -29,7 +29,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dist/headless-theme
-          git ls-files -z | grep -zvE '^(\.github/|\.agents/|\.cursor/|\.gitignore|\.env\.example|AGENTS\.md|CLAUDE\.md|CONTRIBUTING\.md|SECURITY\.md|SUPPORT\.md|docs/|engineering-standards\.yml)' | xargs -0 cp --parents -t dist/headless-theme
+          git ls-files -z | grep -zvE '^(\.github/|\.agents/|\.cursor/|\.gitignore|\.env\.example|AGENTS\.md|CLAUDE\.md|CONTRIBUTING\.md|SECURITY\.md|SUPPORT\.md|docs/|engineering-standards\.yml|tests/|phpunit\.xml\.dist)' | xargs -0 cp --parents -t dist/headless-theme
           (cd dist && zip -qr headless-theme.zip headless-theme && sha256sum headless-theme.zip > headless-theme.zip.sha256)
 
       - name: Publish release
