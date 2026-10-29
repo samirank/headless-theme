@@ -15,6 +15,7 @@ This repository participates in Samiran's software factory. GitHub issues, pull 
 ```sh
 composer validate --strict --no-check-lock
 find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
+composer install && vendor/bin/phpunit
 ```
 
 ## File Map
@@ -24,6 +25,7 @@ find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
 - `style.css`: WordPress theme metadata.
 - `.github/`: issue templates, PR template, workflows, Dependabot, and CODEOWNERS.
 - `docs/`: architecture, runbook, and decisions.
+- `tests/`: PHPUnit tests with WordPress stubs (`tests/bootstrap.php`); dev-only, not shipped.
 
 ## Required Behavior
 
@@ -34,8 +36,8 @@ find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
 - Add or update tests when behavior changes.
 - Run the required commands before opening a PR.
 - Never expose secrets.
-- Never modify production data.
-- Do not merge or deploy.
+- Never modify production data without the owner's explicit approval and a backup taken first.
+- Do not merge, tag, release or deploy unless the owner explicitly approves that specific action in chat; required checks must pass first.
 - Document assumptions.
 - Stop and request human input when requirements conflict.
 

@@ -5,6 +5,7 @@
 ```sh
 composer validate --strict --no-check-lock
 find . -path './vendor' -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
+composer install && vendor/bin/phpunit
 ```
 
 ## Pull Request Review

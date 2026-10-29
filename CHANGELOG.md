@@ -4,6 +4,16 @@ Written for users, in plain language. Versions follow semantic versioning.
 
 ## Unreleased
 
+## 1.0.6 (2026-10-29)
+
+### Changed
+- The settings page text can now be translated.
+- The theme declares where its updates come from (`Update URI`), so WordPress never mistakes another theme with the same name for an update.
+
+### For developers
+- Unit tests (PHPUnit) for the redirect, the settings save and the changelog page, run in CI.
+- GitHub Actions pinned to commit SHAs; test files are kept out of the release zip.
+
 ## 1.0.5 (2026-10-14)
 
 ### Changed

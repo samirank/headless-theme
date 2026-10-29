@@ -13,10 +13,10 @@ jobs:
     runs-on: ubicloud-standard-2-ubuntu-2404
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
         with:
           php-version: "8.2"
           tools: composer
@@ -24,6 +24,12 @@ jobs:
       - name: Validate Composer configuration
         if: hashFiles('composer.json') != ''
         run: composer validate --strict --no-check-lock
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress
+
+      - name: Unit tests
+        run: vendor/bin/phpunit
 
       - name: PHP syntax check
         shell: bash
